@@ -37,7 +37,7 @@
     linear-gradient(135deg, #181818 0%, #bcbab4 48%, #f4f0eb 100%);
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38)),
-    url('/img/profile.jpg'),
+    
     linear-gradient(135deg, #181818 0%, #bcbab4 48%, #f4f0eb 100%);
   background-position: center;
   background-size: cover;
