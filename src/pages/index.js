@@ -41,29 +41,24 @@ export default function Home() {
       description="Portfolio website for Shinjini Mondal, Marketing and PR Professional">
       <main className={styles.page}>
         <section className={styles.hero}>
-          <div className={styles.heroContent}>
-            <p className={styles.eyebrow}>Marketing & PR Professional</p>
-            <Heading as="h1" className={styles.heroTitle}>
-              Shinjini Mondal
-            </Heading>
-            <p className={styles.heroText}>
-              I help brands communicate with clarity through public relations,
-              content, campaigns, and thoughtful storytelling.
-            </p>
-            <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#resume">
-                View resume
-              </a>
-              <a className={styles.secondaryButton} href="#contact">
-                Contact me
-              </a>
+          <div className={styles.sideLabel}>Marketing & PR</div>
+          <div className={styles.heroImage} aria-label="Editorial portrait area">
+            <div className={styles.heroOverlay}>
+              <p className={styles.eyebrow}>Portfolio & Resume</p>
+              <Heading as="h1" className={styles.heroTitle}>
+                Shinjini Mondal
+              </Heading>
+              <p className={styles.heroText}>
+                Building memorable brand presence through public relations,
+                campaigns, content, and clear storytelling.
+              </p>
             </div>
           </div>
-          <aside className={styles.profileCard} aria-label="Profile summary">
-            <div className={styles.initials}>SM</div>
-            <p>Based in the UAE</p>
-            <strong>Marketing, PR, communications, and brand storytelling</strong>
-          </aside>
+          <div className={styles.heroTiles}>
+            <a href="#about">About Me <span>→</span></a>
+            <a href="#experience">Experience <span>→</span></a>
+            <a href="#contact">Get In Touch <span>→</span></a>
+          </div>
         </section>
 
         <section id="about" className={styles.section}>
