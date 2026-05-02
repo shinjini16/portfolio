@@ -5,33 +5,47 @@ import styles from './index.module.css';
 const experience = [
   {
     role: 'Marketing & PR Professional',
-    place: 'Brand communications, media relations, and campaign support',
+    place: 'Brand Communications · Media Relations · Campaign Support',
     detail:
-      'Building clear stories, polished public-facing content, and organized campaigns that help brands show up with confidence.',
+      'Building clear narratives, polished public-facing content, and structured campaigns that help brands show up with clarity and confidence.',
   },
   {
     role: 'Communications Strategy',
-    place: 'Messaging, positioning, launches, and stakeholder updates',
+    place: 'Messaging · Positioning · Stakeholder Communication',
     detail:
-      'Turning ideas into structured narratives for audiences, partners, press, and internal teams.',
+      'Translating ideas into structured communication strategies across audiences, from clients and partners to media and internal teams.',
+  },
+  {
+    role: 'Client Relations & Account Management',
+    place: 'Client Management · Relationship Building · Cross-Functional Collaboration',
+    detail:
+      'Managing multiple client relationships, aligning expectations, and ensuring communication flows clearly across teams and deliverables.',
   },
   {
     role: 'Content & Social Media',
-    place: 'Editorial planning, copywriting, and digital storytelling',
+    place: 'Editorial Planning · Copywriting · Digital Storytelling',
     detail:
-      'Creating content that feels thoughtful, relevant, and aligned with the brand voice.',
+      'Creating content that feels intentional, relevant, and aligned with the brand voice.',
   },
 ];
 
-const skills = [
-  'Public relations',
-  'Brand storytelling',
-  'Campaign planning',
-  'Copywriting',
-  'Media outreach',
-  'Social media strategy',
-  'Event coordination',
-  'Presentation building',
+const skillGroups = [
+  {
+    category: 'Public Relations & Communications',
+    skills: ['Public relations', 'Media outreach', 'Press releases', 'Stakeholder communication'],
+  },
+  {
+    category: 'Content & Brand Strategy',
+    skills: ['Brand storytelling', 'Copywriting', 'Content strategy', 'Editorial planning'],
+  },
+  {
+    category: 'Campaigns & Digital Marketing',
+    skills: ['Campaign planning', 'Social media strategy', 'Digital marketing', 'Analytics reporting'],
+  },
+  {
+    category: 'Events & Presentation',
+    skills: ['Event coordination', 'Presentation building', 'Client coordination', 'Project support'],
+  },
 ];
 
 export default function Home() {
@@ -117,9 +131,16 @@ export default function Home() {
 
         <section id="skills" className={styles.section}>
           <div className={styles.sectionLabel}>Skills</div>
-          <div className={styles.skills}>
-            {skills.map((skill) => (
-              <span key={skill}>{skill}</span>
+          <div className={styles.skillGroups}>
+            {skillGroups.map((group) => (
+              <div className={styles.skillGroup} key={group.category}>
+                <Heading as="h3">{group.category}</Heading>
+                <div className={styles.skills}>
+                  {group.skills.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
