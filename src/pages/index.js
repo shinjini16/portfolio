@@ -4,28 +4,34 @@ import styles from './index.module.css';
 
 const experience = [
   {
-    role: 'Marketing & PR Professional',
-    place: 'Brand Communications · Media Relations · Campaign Support',
+    role: 'Marketing & Communications Consultant, Freelance',
+    place: 'Vancouver, BC · Jan 2023 - Present',
     detail:
-      'Building clear narratives, polished public-facing content, and structured campaigns that help brands show up with clarity and confidence.',
+      'Managed communications and brand presence for five healthcare clients, securing regional media coverage, building community partnerships, and contributing to a 20% increase in patient inquiries.',
   },
   {
-    role: 'Communications Strategy',
-    place: 'Messaging · Positioning · Stakeholder Communication',
+    role: 'Account Executive, DAC Group / Vancouver Ltd.',
+    place: 'Vancouver, BC · Nov 2022 - Nov 2023',
     detail:
-      'Translating ideas into structured communication strategies across audiences, from clients and partners to media and internal teams.',
+      'Managed 30+ B2B and B2C clients across food and beverage, retail, healthcare, home services, finance, construction, technology, automotive, energy, and professional services while maintaining a 95% retention rate and supporting 30% regional revenue growth.',
   },
   {
-    role: 'Client Relations & Account Management',
-    place: 'Client Management · Relationship Building · Cross-Functional Collaboration',
+    role: 'Marketing Strategist, Percy John Flooring',
+    place: 'Burnaby, Canada · Feb 2021 - Oct 2022',
     detail:
-      'Managing multiple client relationships, aligning expectations, and ensuring communication flows clearly across teams and deliverables.',
+      'Led brand positioning and integrated communication strategy across digital platforms, increasing brand visibility through 1,400% traffic growth and 5,000+ new sessions.',
   },
   {
-    role: 'Content & Social Media',
-    place: 'Editorial Planning · Copywriting · Digital Storytelling',
+    role: 'Marketing Consultant, Murcialva',
+    place: 'Burnaby, Canada · Sept 2021 - Jul 2022',
     detail:
-      'Creating content that feels intentional, relevant, and aligned with the brand voice.',
+      'Defined brand identity and communication strategy for a retail startup, generating 70+ early customers in eight months and supporting growth from 2% to 7% market share.',
+  },
+  {
+    role: 'Senior Marketing Consultant, The Acquisition Group',
+    place: 'Burnaby, Canada · Oct 2020 - Jan 2021',
+    detail:
+      'Exceeded weekly performance targets by 33-67% in high-volume client-facing environments while strengthening real-time communication, persuasion, and brand representation skills.',
   },
 ];
 
@@ -117,15 +123,50 @@ export default function Home() {
         </section>
 
         <section id="about" className={styles.section}>
-          <div className={styles.sectionLabel}>About</div>
+          <div className={styles.sectionLabel}>About Me</div>
           <div>
-            <Heading as="h2">A clear voice for brands and people.</Heading>
-            <p>
-              This portfolio is a home for my professional story: what I do,
-              how I think, and the work I want to be known for. The next step is
-              to replace these starter lines with your real bio, achievements,
-              and career highlights.
-            </p>
+            <Heading as="h2">Shaping how brands are seen, understood, and remembered.</Heading>
+            <div className={styles.aboutGrid}>
+              <div>
+                <Heading as="h3">About</Heading>
+                <p>
+                  Hi! I’m <strong>Shinjini Mondal</strong>, a communications
+                  professional with roots in marketing, client relations, and
+                  brand strategy, now focused on public relations.
+                </p>
+                <p>
+                  I’m drawn to brands that are intentional. <strong>Luxury.
+                  Beauty. Fashion.</strong> Spaces where a single word, a pause,
+                  a detail can shift everything. Because communication isn’t
+                  about being seen, it’s about being <em>understood</em>.
+                </p>
+                <p>
+                  I’m intuitive and people-focused, but also unmistakably direct.
+                  I move with clarity, read situations quickly, and make
+                  decisions with purpose. I believe in honesty that builds trust
+                  and authenticity that creates lasting impact.
+                </p>
+                <p>
+                  I approach everything with intention and heart — in conversation,
+                  in relationships, in work. I don’t do halfway.
+                </p>
+                <p>
+                  I’m building toward becoming an <strong>architect of
+                  perception</strong>, shaping how brands are seen, understood,
+                  and remembered.
+                </p>
+              </div>
+              <div>
+                <Heading as="h3">Beyond Work</Heading>
+                <p>
+                  When I’m not working, I’m usually in my kitchen experimenting.
+                  Cooking runs deep in my Bengali roots. After years of putting
+                  everything else first, I’m finally all in on my fitness
+                  journey. It’s teaching me discipline, presence, and patience —
+                  the same traits I bring into my work and life every day.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
