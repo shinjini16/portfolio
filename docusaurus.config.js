@@ -51,10 +51,10 @@ const config = {
       navbar: {
         title: 'Shinjini Mondal',
         items: [
+          {to: '/#home', label: 'Home', position: 'right'},
           {to: '/#about', label: 'About', position: 'right'},
-          {to: '/#experience', label: 'Experience', position: 'right'},
           {to: '/#resume', label: 'Resume', position: 'right'},
-          {to: '/#skills', label: 'Skills', position: 'right'},
+          {to: '/#work', label: 'Work', position: 'right'},
           {to: '/#contact', label: 'Contact', position: 'right'},
         ],
       },
@@ -74,11 +74,11 @@ const config = {
             items: [
               {
                 label: 'LinkedIn',
-                href: 'https://www.linkedin.com/',
+                href: 'https://www.linkedin.com/in/shinjinimondal/',
               },
               {
                 label: 'Email',
-                href: 'mailto:hello@example.com',
+                href: 'mailto:shinjinimondal@outlook.com',
               },
             ],
           },
