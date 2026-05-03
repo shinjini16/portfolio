@@ -197,6 +197,33 @@
   line-height: 1.75;
 }
 
+.aboutGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 44px;
+  margin-top: 36px;
+}
+
+.aboutGrid h3 {
+  margin: 0 0 18px;
+  color: #111;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.aboutGrid p {
+  margin: 0 0 18px;
+}
+
+.aboutGrid strong {
+  font-weight: 700;
+}
+
+.aboutGrid em {
+  font-style: italic;
+}
+
 .timeline {
   display: grid;
   border-top: 1px solid #111;
@@ -434,6 +461,10 @@
   .timelineItem {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
   }
 
   .skillGroup {
