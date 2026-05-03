@@ -95,30 +95,82 @@ const selectedWork = [
   },
 ];
 
+const focusCards = [
+  {
+    label: 'Current Focus',
+    text: 'Public Relations for Luxury, Beauty & Lifestyle Brands',
+  },
+  {
+    label: 'Expertise',
+    text: 'Brand Messaging, Stakeholder Relations & Audience Engagement',
+  },
+  {
+    label: 'Based In',
+    text: 'UAE',
+  },
+];
+
+const education = [
+  {
+    credential: 'Bachelor of Business Administration (BBA), International Business',
+    school: 'Royal Roads University (Ras Al Khaimah Campus), UAE',
+    date: 'In Progress · Expected 2027',
+  },
+  {
+    credential: 'General Business Diploma',
+    school: 'Douglas College, New Westminster, BC',
+    date: '2018 - 2021',
+  },
+];
+
 export default function Home() {
   return (
     <Layout
       title="Portfolio"
-      description="Portfolio website for Shinjini Mondal, Marketing and PR Professional">
+      description="Portfolio website for Shinjini Mondal, PR and Communications Specialist">
       <main className={styles.page}>
-        <section className={styles.hero}>
-          <div className={styles.sideLabel}>Marketing & PR</div>
-          <div className={styles.heroImage} aria-label="Editorial portrait area">
-            <div className={styles.heroOverlay}>
+        <section id="home" className={styles.hero}>
+          <div className={styles.heroInner}>
+            <div className={styles.heroCopy}>
               <p className={styles.eyebrow}>Portfolio & Resume</p>
               <Heading as="h1" className={styles.heroTitle}>
                 Shinjini Mondal
               </Heading>
               <p className={styles.heroText}>
-                Building memorable brand presence through public relations,
-                campaigns, content, and clear storytelling.
+                PR & communications specialist with North American experience
+                and a global perspective.
               </p>
+              <div className={styles.heroActions}>
+                <a className={styles.primaryButton} href="#experience">
+                  View Experience
+                </a>
+                <a className={styles.secondaryButton} href="#work">
+                  View Selected Work & Writing
+                </a>
+                <a className={styles.secondaryButton} href="#contact">
+                  Start a Conversation
+                </a>
+              </div>
             </div>
+            <aside className={styles.portraitCard} aria-label="Portrait and career highlights">
+              <div className={styles.portraitFrame}>
+                <img src="/img/profile.jpg" alt="Shinjini Mondal" />
+              </div>
+              <div className={styles.statsBar}>
+                <span><strong>4+</strong> Years</span>
+                <span><strong>30+</strong> Industries</span>
+                <span><strong>Global</strong> Perspective</span>
+              </div>
+            </aside>
           </div>
-          <div className={styles.heroTiles}>
-            <a href="#about">About Me <span>→</span></a>
-            <a href="#experience">Experience <span>→</span></a>
-            <a href="#contact">Get In Touch <span>→</span></a>
+
+          <div className={styles.focusGrid}>
+            {focusCards.map((card) => (
+              <article className={styles.focusCard} key={card.label}>
+                <span>{card.label}</span>
+                <strong>{card.text}</strong>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -170,6 +222,37 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="resume" className={styles.resumeSection}>
+          <div>
+            <p className={styles.sectionLabel}>Resume</p>
+            <Heading as="h2">A closer look at my work and experience.</Heading>
+            <p>
+              A focused view of my communications experience, cross-industry
+              client work, core skills, and education.
+            </p>
+            <a className={styles.primaryButton} href="/resume.pdf" download>
+              Download My Resume
+            </a>
+          </div>
+          <div className={styles.resumeGrid}>
+            <div>
+              <span>01</span>
+              <strong>Experience</strong>
+              <p>PR, communications, account management, and brand strategy.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Skills</strong>
+              <p>Media outreach, messaging, stakeholder communication, and campaigns.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Education</strong>
+              <p>Business education across Canada and the UAE.</p>
+            </div>
+          </div>
+        </section>
+
         <section id="experience" className={styles.section}>
           <div className={styles.sectionLabel}>Experience</div>
           <div className={styles.timeline}>
@@ -180,34 +263,6 @@ export default function Home() {
                 <p>{item.detail}</p>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section id="resume" className={styles.resumeSection}>
-          <div>
-            <p className={styles.sectionLabel}>Resume</p>
-            <Heading as="h2">Make this section your career snapshot.</Heading>
-            <p>
-              Add your education, internships, work experience, certificates,
-              selected campaigns, and a downloadable resume link here.
-            </p>
-          </div>
-          <div className={styles.resumeGrid}>
-            <div>
-              <span>01</span>
-              <strong>Education</strong>
-              <p>Add your degree, university, dates, and academic highlights.</p>
-            </div>
-            <div>
-              <span>02</span>
-              <strong>Experience</strong>
-              <p>Add roles, companies, dates, and the impact you created.</p>
-            </div>
-            <div>
-              <span>03</span>
-              <strong>Selected Work</strong>
-              <p>Add writing samples, campaign concepts, and brand strategy projects.</p>
-            </div>
           </div>
         </section>
 
@@ -223,6 +278,19 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="education" className={styles.section}>
+          <div className={styles.sectionLabel}>Education</div>
+          <div className={styles.educationGrid}>
+            {education.map((item) => (
+              <article className={styles.educationItem} key={item.credential}>
+                <span>{item.date}</span>
+                <Heading as="h3">{item.credential}</Heading>
+                <p>{item.school}</p>
+              </article>
             ))}
           </div>
         </section>
@@ -245,20 +313,40 @@ export default function Home() {
         </section>
 
         <section id="contact" className={styles.contact}>
-          <p className={styles.sectionLabel}>Contact</p>
-          <Heading as="h2">Let us connect.</Heading>
-          <p>
-            Replace this with your real email and LinkedIn link when you are
-            ready.
-          </p>
-          <div className={styles.heroActions}>
-            <a className={styles.primaryButton} href="mailto:hello@example.com">
-              Email me
-            </a>
-            <a className={styles.secondaryButton} href="https://www.linkedin.com/">
-              LinkedIn
+          <div>
+            <p className={styles.sectionLabel}>Contact</p>
+            <Heading as="h2">Start a conversation.</Heading>
+            <p>
+              For PR, communications, writing, or brand storytelling
+              opportunities, send a note directly through the form.
+            </p>
+            <a
+              className={styles.secondaryButton}
+              href="https://www.linkedin.com/in/shinjinimondal/">
+              Visit My LinkedIn
             </a>
           </div>
+          <form
+            className={styles.contactForm}
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            action="/#contact">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required />
+            </label>
+            <button type="submit">Email Shinjini</button>
+          </form>
         </section>
       </main>
     </Layout>
