@@ -32,19 +32,60 @@ const experience = [
 const skillGroups = [
   {
     category: 'Public Relations & Communications',
-    skills: ['Public relations', 'Media outreach', 'Press releases', 'Stakeholder communication'],
+    skills: [
+      'Media Outreach & Relations',
+      'Brand Messaging & Positioning',
+      'Reputation Management',
+      'Stakeholder Communication',
+    ],
   },
   {
-    category: 'Content & Brand Strategy',
-    skills: ['Brand storytelling', 'Copywriting', 'Content strategy', 'Editorial planning'],
+    category: 'Brand & Content Strategy',
+    skills: [
+      'Brand Storytelling',
+      'Copywriting',
+      'Content Strategy',
+      'Campaign Planning',
+    ],
   },
   {
-    category: 'Campaigns & Digital Marketing',
-    skills: ['Campaign planning', 'Social media strategy', 'Digital marketing', 'Analytics reporting'],
+    category: 'Brand Growth & Audience Engagement',
+    skills: [
+      'Audience Engagement & Growth',
+      'Social Media Strategy',
+      'Brand Visibility & Awareness',
+      'Digital Communication Strategy',
+    ],
   },
   {
-    category: 'Events & Presentation',
-    skills: ['Event coordination', 'Presentation building', 'Client coordination', 'Project support'],
+    category: 'Client & Campaign Management',
+    skills: [
+      'Client Relationship Management',
+      'Campaign Coordination',
+      'Cross-Functional Collaboration',
+      'Strategic Communication',
+    ],
+  },
+];
+
+const selectedWork = [
+  {
+    title: 'Press Release (Spec Work)',
+    description:
+      'A sample press release developed to demonstrate media writing, structure, and brand positioning.',
+    href: '#contact',
+  },
+  {
+    title: 'Brand Messaging Breakdown',
+    description:
+      'An analysis of brand voice, positioning, and communication strategy across platforms.',
+    href: '#contact',
+  },
+  {
+    title: 'Campaign Concept (Spec Work)',
+    description:
+      'A conceptual PR and communications campaign designed to showcase strategic thinking and storytelling.',
+    href: '#contact',
   },
 ];
 
@@ -123,8 +164,8 @@ export default function Home() {
             </div>
             <div>
               <span>03</span>
-              <strong>Portfolio</strong>
-              <p>Add campaigns, writing samples, events, and creative projects.</p>
+              <strong>Selected Work</strong>
+              <p>Add writing samples, campaign concepts, and brand strategy projects.</p>
             </div>
           </div>
         </section>
@@ -142,6 +183,23 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="work" className={styles.section}>
+          <div className={styles.sectionLabel}>Work</div>
+          <div>
+            <Heading as="h2">Selected Work & Writing</Heading>
+            <div className={styles.workGrid}>
+              {selectedWork.map((item, index) => (
+                <article className={styles.workItem} key={item.title}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <Heading as="h3">{item.title}</Heading>
+                  <p>{item.description}</p>
+                  <a href={item.href}>View Project</a>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
