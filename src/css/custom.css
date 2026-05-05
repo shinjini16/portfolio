@@ -6,14 +6,12 @@
   --ifm-color-primary-light: #333333;
   --ifm-color-primary-lighter: #555555;
   --ifm-color-primary-lightest: #777777;
-  --ifm-font-family-base:
-    Georgia, 'Times New Roman', Times, serif;
+  --ifm-font-family-base: Georgia, 'Times New Roman', Times, serif;
   --ifm-heading-font-weight: 400;
   --ifm-navbar-height: 58px;
-  --ifm-navbar-background-color: #f8f7f4;
+  --ifm-navbar-background-color: #eeeeec;
   --ifm-footer-background-color: #111111;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -30,61 +28,86 @@ body {
 }
 
 .navbar__inner {
-  padding: 0;
+  position: relative;
 }
 
 .navbar__brand {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
+  margin-right: auto;
+  pointer-events: none;
 }
 
 .navbar__title {
   color: #111;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 400;
 }
 
-.navbar__items,
-.navbar__items--right {
-  height: var(--ifm-navbar-height);
+.navbar__logo {
+  height: 34px;
+  margin-right: 12px;
 }
 
-.navbar__link {
-  height: var(--ifm-navbar-height);
+.navbar__items--right {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 42px;
+  align-items: center;
+  border: 1px solid #111;
+  background: #f8f7f4;
+}
+
+.navbar__items--right .navbar__link:not(.hireButton) {
+  height: 40px;
   display: inline-flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 22px;
   border-right: 1px solid #111;
   color: #111;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-.navbar__items > .navbar__link:first-child {
-  border-left: 1px solid #111;
+.navbar__items--right .navbar__link:not(.hireButton):nth-last-child(2) {
+  border-right: 0;
 }
 
-.navbar__link:hover {
+.navbar__items--right .navbar__link--active:not(.hireButton),
+.navbar__items--right .navbar__link:not(.hireButton):hover {
   color: #f8f7f4;
   background: #111;
 }
 
-.navbar-sidebar__brand {
-  box-shadow: none;
-  border-bottom: 1px solid #111;
+.hireButton {
+  position: fixed;
+  right: 28px;
+  top: 8px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  border: 1px solid #111;
+  color: #111;
+  background: #eeeeec;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hireButton:hover {
+  color: #f8f7f4;
+  background: #111;
 }
 
 .footer {
   border-top: 1px solid #111;
+  background: #111;
+  padding: 22px 0;
 }
 
-.footer__title,
-.footer__link-item,
 .footer__copyright {
   color: #f8f7f4;
   font-family: Georgia, 'Times New Roman', serif;
@@ -112,12 +135,19 @@ body {
 }
 
 @media screen and (max-width: 996px) {
-  .navbar__brand {
+  .navbar__items--right {
     position: static;
     transform: none;
+    border: 0;
+    background: transparent;
   }
 
-  .navbar__link {
+  .navbar__items--right .navbar__link:not(.hireButton) {
     border-right: 0;
+  }
+
+  .hireButton {
+    position: static;
+    margin-left: 8px;
   }
 }
