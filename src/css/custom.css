@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
 :root {
   --ifm-color-primary: #111111;
   --ifm-color-primary-dark: #000000;
@@ -7,9 +9,10 @@
   --ifm-color-primary-lighter: #555555;
   --ifm-color-primary-lightest: #777777;
   --ifm-font-family-base: Georgia, 'Times New Roman', Times, serif;
+  --portfolio-display-font: 'DM Serif Display', Georgia, 'Times New Roman', serif;
   --ifm-heading-font-weight: 400;
   --ifm-navbar-height: 58px;
-  --ifm-navbar-background-color: #eeeeec;
+  --ifm-navbar-background-color: #ffffff;
   --ifm-footer-background-color: #111111;
   --ifm-code-font-size: 95%;
 }
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  background: #eeeeec;
+  background: #ffffff;
 }
 
 .navbar {
@@ -38,7 +41,7 @@ body {
 
 .navbar__title {
   color: #111;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--portfolio-display-font);
   font-size: 1.35rem;
   font-weight: 400;
 }
@@ -55,7 +58,7 @@ body {
   height: 42px;
   align-items: center;
   border: 1px solid #111;
-  background: #f8f7f4;
+  background: #ffffff;
 }
 
 .navbar__items--right .navbar__link:not(.hireButton) {
@@ -77,28 +80,29 @@ body {
 
 .navbar__items--right .navbar__link--active:not(.hireButton),
 .navbar__items--right .navbar__link:not(.hireButton):hover {
-  color: #f8f7f4;
+  color: #ffffff;
   background: #111;
 }
 
 .hireButton {
-  position: fixed;
-  right: 28px;
-  top: 8px;
+  position: absolute !important;
+  left: calc(50vw - 96px) !important;
+  top: -1px !important;
+  z-index: 20;
   height: 42px;
   display: inline-flex;
   align-items: center;
   padding: 0 20px;
   border: 1px solid #111;
   color: #111;
-  background: #eeeeec;
+  background: #ffffff;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .hireButton:hover {
-  color: #f8f7f4;
+  color: #ffffff;
   background: #111;
 }
 
@@ -109,29 +113,29 @@ body {
 }
 
 .footer__copyright {
-  color: #f8f7f4;
+  color: #ffffff;
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 400;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #f8f7f4;
-  --ifm-navbar-background-color: #111111;
-  --ifm-footer-background-color: #000000;
+  --ifm-color-primary: #111111;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #111111;
 }
 
 [data-theme='dark'] body,
 [data-theme='dark'] main {
-  background: #111;
+  background: #ffffff;
 }
 
 [data-theme='dark'] .navbar {
-  border-bottom-color: #f8f7f4;
+  border-bottom-color: #111;
 }
 
 [data-theme='dark'] .navbar__title,
 [data-theme='dark'] .navbar__link {
-  color: #f8f7f4;
+  color: #111;
 }
 
 @media screen and (max-width: 996px) {
@@ -147,7 +151,7 @@ body {
   }
 
   .hireButton {
-    position: static;
+    position: static !important;
     margin-left: 8px;
   }
 }
