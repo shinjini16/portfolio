@@ -11,11 +11,19 @@ export default function Contact() {
         <section className={styles.contactPage}>
           <div>
             <p className={styles.eyebrow}>Contact</p>
-            <Heading as="h1">Start a conversation.</Heading>
+            <Heading as="h1">Let’s connect.</Heading>
             <p>
-              For PR, communications, writing, or brand storytelling
-              opportunities, send a note directly through the form.
+              For public relations, communications, and brand storytelling
+              opportunities, feel free to reach out directly.
             </p>
+            <figure className={styles.contactImageBlock}>
+              <img src="/img/contact.png" alt="Shinjini Mondal" />
+              <figcaption>
+                If my background and approach resonate with you, I’d welcome the
+                opportunity to connect and learn more about your team and the
+                work you’re building.
+              </figcaption>
+            </figure>
             <div className={styles.heroActions}>
               <a
                 className={styles.secondaryButton}
