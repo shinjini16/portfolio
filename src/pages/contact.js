@@ -14,10 +14,12 @@ export default function Contact() {
             <Heading as="h1">Let’s connect.</Heading>
             <p>
               For public relations, communications, and brand storytelling
-              opportunities, feel free to reach out directly.
+              opportunities,
+              <br />
+              feel free to reach out directly.
             </p>
             <figure className={styles.contactImageBlock}>
-              <img src="/img/contact.png" alt="Shinjini Mondal" />
+              <img src="/img/contact.jpg" alt="Shinjini Mondal" loading="eager" />
               <figcaption>
                 If my background and approach resonate with you, I’d welcome the
                 opportunity to connect and learn more about your team and the
