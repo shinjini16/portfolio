@@ -139,7 +139,7 @@ export const focusCards = [
   },
   {
     label: 'Based In',
-    text: 'UAE',
+    text: 'United Arab Emirates',
   },
 ];
 

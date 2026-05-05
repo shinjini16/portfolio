@@ -18,10 +18,14 @@ export default function Work() {
           <div className={styles.workGrid}>
             {selectedWork.map((item, index) => (
               <article className={styles.workItem} key={item.title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <Heading as="h2">{item.title}</Heading>
-                <p>{item.description}</p>
-                <a href={item.href}>View Project</a>
+                <div className={styles.workVisual}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                </div>
+                <div className={styles.workBody}>
+                  <Heading as="h2">{item.title}</Heading>
+                  <p>{item.description}</p>
+                  <a href={item.href}>View Project</a>
+                </div>
               </article>
             ))}
           </div>

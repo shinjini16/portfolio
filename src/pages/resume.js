@@ -9,28 +9,26 @@ export default function Resume() {
       title="Resume"
       description="Experience, skills, and education for Shinjini Mondal">
       <main className={styles.page}>
-        <section className={styles.pageHero}>
-          <p className={styles.eyebrow}>Resume</p>
-          <Heading as="h1">A closer look at my work and experience.</Heading>
-          <a
-            className={styles.primaryButton}
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer">
-            Download My Resume
-          </a>
-        </section>
-
-        <section className={styles.contentSection}>
-          <div className={styles.sectionLabel}>Core Skills</div>
+        <section className={`${styles.pageHero} ${styles.resumeHero}`}>
           <div>
+            <p className={styles.eyebrow}>Resume</p>
+            <Heading as="h1">A closer look at my work and experience.</Heading>
+            <a
+              className={styles.primaryButton}
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer">
+              Download My Resume
+            </a>
+          </div>
+          <aside className={styles.coreExpertisePanel}>
             <Heading as="h2">Core Expertise</Heading>
             <div className={styles.coreTags}>
               {coreExpertise.map((skill) => (
                 <span key={skill}>{skill}</span>
               ))}
             </div>
-          </div>
+          </aside>
         </section>
 
         <section className={styles.contentSection}>
