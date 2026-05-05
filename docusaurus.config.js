@@ -45,7 +45,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
@@ -55,7 +55,7 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {to: '/', label: 'Home', position: 'right'},
+          {to: '/', label: 'Home', position: 'right', exact: true},
           {to: '/resume', label: 'Resume', position: 'right'},
           {to: '/work', label: 'Work', position: 'right'},
           {to: '/contact', label: 'Contact', position: 'right'},
