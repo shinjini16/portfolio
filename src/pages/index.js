@@ -24,9 +24,6 @@ export default function Home() {
                 <a className={styles.primaryButton} href="/resume">
                   View Experience
                 </a>
-                <a className={styles.secondaryButton} href="/work">
-                  View Selected Work & Writing
-                </a>
                 <a className={styles.secondaryButton} href="/contact">
                   Start a Conversation
                 </a>
@@ -35,7 +32,7 @@ export default function Home() {
 
             <aside className={styles.portraitCard} aria-label="Portrait and career highlights">
               <div className={styles.portraitFrame}>
-                <img src="/img/profile.jpg" alt="Shinjini Mondal" />
+                <img src="/img/profile.png" alt="Shinjini Mondal" />
               </div>
               <div className={styles.statsBar}>
                 <span><strong>4+</strong> Years</span>
@@ -106,12 +103,13 @@ export default function Home() {
         </section>
 
         <section className={styles.previewSection}>
-          <div>
+          <div className={styles.previewHeader}>
             <p className={styles.eyebrow}>Selected Work</p>
             <Heading as="h2">Writing and strategy, in progress.</Heading>
+            <a href="/work">View Selected Work & Writing</a>
           </div>
           <div className={styles.previewGrid}>
-            {selectedWork.slice(0, 2).map((item) => (
+            {selectedWork.map((item) => (
               <a className={styles.previewItem} href="/work" key={item.title}>
                 <Heading as="h3">{item.title}</Heading>
                 <p>{item.description}</p>
