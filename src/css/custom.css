@@ -86,12 +86,14 @@ body {
 
 .hireButton {
   position: absolute !important;
-  left: calc(50vw - 96px) !important;
+  left: calc(50vw - 112px) !important;
   top: -1px !important;
   z-index: 20;
   height: 42px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 132px;
   padding: 0 20px;
   border: 1px solid #111;
   color: #111;
@@ -99,6 +101,7 @@ body {
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hireButton:hover {
