@@ -50,39 +50,25 @@ const config = {
       },
       navbar: {
         title: 'Shinjini Mondal',
+        logo: {
+          alt: 'SM',
+          src: 'img/logo.svg',
+        },
         items: [
-          {to: '/#home', label: 'Home', position: 'right'},
-          {to: '/#about', label: 'About', position: 'right'},
-          {to: '/#resume', label: 'Resume', position: 'right'},
-          {to: '/#work', label: 'Work', position: 'right'},
-          {to: '/#contact', label: 'Contact', position: 'right'},
+          {to: '/', label: 'Home', position: 'right'},
+          {to: '/resume', label: 'Resume', position: 'right'},
+          {to: '/work', label: 'Work', position: 'right'},
+          {to: '/contact', label: 'Contact', position: 'right'},
+          {
+            href: 'mailto:shinjinimondal@outlook.com',
+            label: 'Hire Me ↗',
+            position: 'right',
+            className: 'hireButton',
+          },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Portfolio',
-            items: [
-              {label: 'About', to: '/#about'},
-              {label: 'Resume', to: '/#resume'},
-              {label: 'Contact', to: '/#contact'},
-            ],
-          },
-          {
-            title: 'Connect',
-            items: [
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/shinjinimondal/',
-              },
-              {
-                label: 'Email',
-                href: 'mailto:shinjinimondal@outlook.com',
-              },
-            ],
-          },
-        ],
         copyright: `Copyright © ${new Date().getFullYear()} Shinjini Mondal.`,
       },
       prism: {
